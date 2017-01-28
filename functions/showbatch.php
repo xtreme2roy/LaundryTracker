@@ -62,7 +62,7 @@ else {
 		$sorted_keys[$fileinfo->getMTime()] = $fileinfo->key();
 	}
 	
-	ksort($sorted_keys);
+	rsort($sorted_keys);
 	
 	foreach ( $sorted_keys as $key ) {
 	
