@@ -33,11 +33,17 @@ if($list != "all"){
 		
 	if (strpos($list,'current') !== false) {				
 		echo "&nbsp;";
-		echo "<a class=\"appButton\" href=\"../../functions/deliverbatch.php?list=".$list."\"><b>Deliver Batch</b></a>";				
+		echo "<a class=\"appButton\" href=\"../../functions/savebatch.php?list=".$list."\"><b>Save Batch</b></a>";				
 	}
-	else{	
+	else{
+	
+		$batchDetails = explode('_', $list);
+		$isDelivered = (strtolower($batchDetails[3]) == 'y') ? 'Undelivered': 'Delivered';
+		$isClaimed = (strtolower($batchDetails[4]) == 'y') ? 'Unclaimed': 'Claimed';
 		echo "&nbsp;";
-		echo "<a class=\"appButton\" href=\"../../functions/claimbatch.php?list=".$list."\"><b>Set as 'Claimed'</b></a>";	
+		echo "<a class=\"appButton\" href=\"../../functions/deliverbatch.php?list=".$list."\"><b>Set as '".$isDelivered."'</b></a>";
+		echo "&nbsp;";
+		echo "<a class=\"appButton\" href=\"../../functions/claimbatch.php?list=".$list."\"><b>Set as '".$isClaimed."'</b></a>";	
 		echo "&nbsp;";
 		echo "<a class=\"appButton\" href=\"../../functions/deletebatch.php?list=".$list."\"><b>Delete Batch</b></a>";		
 	}
@@ -70,8 +76,8 @@ else {
 				}
 				fclose($laundryEntry);
 				
-				$isDelivered = (strtolower($batchDetails[3]) == 'y') ? 'Yes': 'No';
-				$isClaimed = (strtolower($batchDetails[4]) == 'y') ? 'Yes': 'No';
+				$isDelivered = (strtolower($batchDetails[3]) == 'y') ? '<font color="#00FF00">Yes</font>': '<font color="red">No</font>';
+				$isClaimed = (strtolower($batchDetails[4]) == 'y') ? '<font color="#00FF00">Yes</font>': '<font color="red">No</font>';
 				$deliveryTime = explode('-', $batchDetails[5]);
 				
 				echo "<tr class=\"rowhighlight\" align=center onclick=\"location.href='../../pages/addbatch/index.php?list=".$fileNameNoExtension."'\">";
