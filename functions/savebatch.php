@@ -12,7 +12,7 @@ $deliveredFileName = 'laundryEntry_'.date('Y-m-d').'_0.00_n_n_'.date('h-i-a');
 rename('../lists/'.$laundryEntryFileName, '../lists/'.$deliveredFileName.'.list');
 
 file_put_contents('../lists/'.$laundryEntryFileName, '');
-echo "Laundry Batch List: '".$laundryEntryFileName."' successfully saved.";
+echo "Laundry Batch List: '".$deliveredFileName."' successfully saved.";
 
 //Return to previous page
 header("Location: ../pages/addbatch/index.php?list=".$deliveredFileName);

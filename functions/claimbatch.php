@@ -10,7 +10,7 @@ $batchDetails = explode('_', $list);
 $isClaimed = (strtolower($batchDetails[4]) == 'y') ? 'n': 'y';
 $updatedFileName = 'laundryEntry_'.$batchDetails[1].'_'.$batchDetails[2].'_y_'.$isClaimed.'_'.$batchDetails[5];
 rename('../lists/'.$laundryEntryFileName, '../lists/'.$updatedFileName.'.list');
-echo "Laundry Batch List: '".$laundryEntryFileName."' successfully claimed.";
+echo "Laundry Batch List: '".$updatedFileName."' successfully claimed.";
 
 //Return to previous page
 header("Location: ../pages/addbatch/index.php?list=".$updatedFileName);
