@@ -59,7 +59,16 @@ else {
 	
 	foreach ( $dir_iterator as $fileinfo )
 	{
-		$sorted_keys[$fileinfo->getFilename()] = $fileinfo->key();
+		if (!$fileinfo->isDot()) {
+			$fileNameNoExtension = preg_replace("/\.[^.]+$/", "", $fileinfo->getFilename());
+			$fileName = explode('_', $fileNameNoExtension);
+			
+			if (trim(strpos($fileName[1],'current')) !== true) {				
+				$fileKey = str_replace("-", "", $fileName[1]);		
+				$sorted_keys[$fileKey] = $fileinfo->key();		
+			}
+		}
+
 	}
 	
 	rsort($sorted_keys);
