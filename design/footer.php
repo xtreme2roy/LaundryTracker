@@ -7,7 +7,7 @@
 				</p>
 				<p>The time is&nbsp
 					<?php
-					date_default_timezone_set('Asia/Taipei');				
+					date_default_timezone_set('Asia/Manila');				
 					echo "<b>";
 					echo date('h:i A');
 					echo " PHT</b>";

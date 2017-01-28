@@ -62,6 +62,22 @@
 	  background-color: #c0c0c0;
 	  color: inherit;	  
 	  }
+	
+	a.appButton {
+	  font: bold 14px Arial;
+	  text-decoration: none;
+	  background-color: #EEEEEE;
+	  color: #333333;
+	  padding: 2px 6px 2px 6px;
+	  border-top: 1px solid #CCCCCC;
+	  border-right: 1px solid #333333;
+	  border-bottom: 1px solid #333333;
+	  border-left: 1px solid #CCCCCC;	
+	}
+	a.appButton:hover{
+	  color: #FFFFFF;
+	  background-color: grey;
+	}
 
 /**************** images styles ****************/		
 	a img{
@@ -157,20 +173,24 @@
 	  
 /**************** table styles ****************/
 	  table {
-		font-size:small		
+		font-size:small;		
 	  }
 
-/* Background colors defined on table cells */
-th         { background-color: #ccc; }	
+	  th {
+		background-color: #A9A9A9;
+	  }	
+	
 	  tr.rowhighlight{
 		background-color: #FFFFFF;
 	  }
 
 	  tr.rowhighlight:hover{
-		background-color: #c0c0c0;
+		background-color: #D3D3D3;
 		cursor: pointer;
 	  }
 
 	  table.nogap{
+        border: 1px solid #D3D3D3;
+		border-spacing: 2px;
 		border-collapse: collapse;
 	  }

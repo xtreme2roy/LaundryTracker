@@ -23,6 +23,29 @@ if($list != "all"){
 		echo "<tr align=center><td colspan=\"6\"><b><u>INFO</u>:</b> No item(s) yet for this laundry batch.</td></tr>";
 	}
 	fclose($laundryEntry);
+	
+	echo "<br />";
+	echo "<tr align=center><td colspan=\"6\"> &nbsp; </tr>";
+	echo "<tr align=center><td colspan=\"6\">";
+	echo "<a class=\"appButton\" href=\"../../pages/home/\"><b>Back</b></a>";
+	echo "&nbsp;";
+	echo "<a class=\"appButton\" href=\"../../functions/clearbatch.php?list=".$list."\"><b>Clear List</b></a>";
+		
+	if (strpos($list,'current') !== false) {				
+		echo "&nbsp;";
+		echo "<a class=\"appButton\" href=\"../../functions/deliverbatch.php?list=".$list."\"><b>Deliver Batch</b></a>";				
+	}
+	else{	
+		echo "&nbsp;";
+		echo "<a class=\"appButton\" href=\"../../functions/claimbatch.php?list=".$list."\"><b>Set as 'Claimed'</b></a>";	
+		echo "&nbsp;";
+		echo "<a class=\"appButton\" href=\"../../functions/deletebatch.php?list=".$list."\"><b>Delete Batch</b></a>";		
+	}
+	
+	
+	
+	echo "</tr>";
+	echo "<tr align=center><td colspan=\"6\"> &nbsp; </tr>";
 }
 else {
 	$dir = new DirectoryIterator(dirname('../../lists/.'));
@@ -47,17 +70,24 @@ else {
 				}
 				fclose($laundryEntry);
 				
+				$isDelivered = (strtolower($batchDetails[3]) == 'y') ? 'Yes': 'No';
+				$isClaimed = (strtolower($batchDetails[4]) == 'y') ? 'Yes': 'No';
+				$deliveryTime = explode('-', $batchDetails[5]);
+				
 				echo "<tr class=\"rowhighlight\" align=center onclick=\"location.href='../../pages/addbatch/index.php?list=".$fileNameNoExtension."'\">";
 					echo "<td>".$batchDetails[1]."</td>";
+					echo "<td>".$deliveryTime[0].":".$deliveryTime[1]." ".strtoupper($deliveryTime[2])."</td>";
 					echo "<td>".$laundryCount."</td>";
-					echo "<td>P0.00</td>";
-					echo "<td>Yes</td>";
-					echo "<td>No</td>";
+					echo "<td>P ".$batchDetails[2]."</td>";
+					echo "<td>".$isDelivered."</td>";
+					echo "<td>".$isClaimed."</td>";
 				echo "</tr>";
 			}
 		}
 	}
 	echo "<br />";
-	echo "<tr id=\"addnewbatchbutton\" align=center><td colspan=\"6\"><a href=\"../../pages/addbatch/index.php?list=laundryEntry_current\"><b>Add New Laundry Batch</b></a></tr>";
+	echo "<tr align=center><td colspan=\"7\"> &nbsp; </tr>";
+	echo "<tr align=center><td colspan=\"7\"><a class=\"appButton\"href=\"../../pages/addbatch/index.php?list=laundryEntry_current\"><b>Add New Laundry Batch</b></a></tr>";
+	echo "<tr align=center><td colspan=\"7\"> &nbsp; </tr>";
 }
 ?>

@@ -11,19 +11,21 @@
 			?>
 			
 				<body>
-					<br>
-					<table id="laundryDetailsTable" class="nogap" align="center" style="width:90%;" border=0>
-					<thead>
-						<th colspan=6><?php echo $list; ?></th>
-					</thead>
-					<thead>
-						<th colspan=6 align="left">
+					<table align="center" style="width:90%;">
+					<tr>
+						<td colspan=6 align=center><?php echo $list; ?></td>
+					</tr>
+					<tr>
+						<td colspan=6 align="left">
 							<form>
 								<span id="addItemLabel">Add Item:</span> <input id="searchkey" type="text" size="50" onkeyup="showResult(this.value)">
 								<div id="livesearch"></div>
 							</form>				
-						</th>
-					</thead>
+						</td>
+					</tr>					
+					</table>
+					
+					<table id="laundryDetailsTable" class="nogap" align="center" style="width:90%;">
 					<thead>
 						<th>Image</th>
 						<th>Type</th>

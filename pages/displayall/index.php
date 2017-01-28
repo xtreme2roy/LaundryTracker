@@ -6,9 +6,10 @@
 		
 			<body>
 					
-				<table id="laundryBatchTable" class="nogap laundryBatchTable" align="center" style="width:90%;" border=0>
+				<table id="laundryBatchTable" class="nogap laundryBatchTable" align="center" style="width:90%;">
 				<thead>
 					<th>Batch Date</th>
+					<th>Time Delivered</th>
 					<th>No. of Pieces</th>
 					<th>Amount</th>							
 					<th>Delivered[Yes/No]</th>
