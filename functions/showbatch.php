@@ -59,7 +59,7 @@ else {
 	
 	foreach ( $dir_iterator as $fileinfo )
 	{
-		$sorted_keys[$fileinfo->getMTime()] = $fileinfo->key();
+		$sorted_keys[$fileinfo->getFilename()] = $fileinfo->key();
 	}
 	
 	rsort($sorted_keys);
