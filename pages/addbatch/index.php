@@ -53,7 +53,7 @@
 					<tr>
 						<td colspan=6 align="left">
 							<form>
-								<span id="addItemLabel">Add Item:</span> <input id="searchkey" type="text" size="50" onkeyup="showResult(this.value)">
+								<span id="addItemLabel"><b><u>Add Item</u></b>:</span> <input id="searchkey" type="text" size="50" onkeyup="showResult(this.value)">
 								<div id="livesearch"></div>
 							</form>				
 						</td>
