@@ -54,8 +54,21 @@ if($list != "all"){
 	echo "<tr align=center><td colspan=\"6\"> &nbsp; </tr>";
 }
 else {
-	$dir = new DirectoryIterator(dirname('../../lists/.'));
-	foreach ($dir as $fileinfo) {
+	$sorted_keys = array();
+	$dir_iterator  = new DirectoryIterator(dirname('../../lists/.'));
+	
+	foreach ( $dir_iterator as $fileinfo )
+	{
+		$sorted_keys[$fileinfo->getMTime()] = $fileinfo->key();
+	}
+	
+	ksort($sorted_keys);
+	
+	foreach ( $sorted_keys as $key ) {
+	
+	$dir_iterator->seek($key);
+    $fileinfo = $dir_iterator->current();
+	
 		if (!$fileinfo->isDot()) {
 			$fileNameNoExtension = preg_replace("/\.[^.]+$/", "", $fileinfo->getFilename());
 			$batchDetails = explode('_', $fileNameNoExtension);
