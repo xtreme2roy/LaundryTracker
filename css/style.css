@@ -54,13 +54,13 @@
 	
 	a {
 	  color: inherit;
-	  background-color: #FFFFFF;
+	  background-color: none;
 	  text-decoration: none;
 	  }
 
 	a:hover {
-	  background-color: #c0c0c0;
-	  color: inherit;	  
+	  background-color: none;
+	  color: inherit;	  	  
 	  }
 	
 	a.appButton {
@@ -79,6 +79,13 @@
 	  background-color: grey;
 	}
 
+	.removeButton {
+	  transition: all .2s ease-in-out; 
+	}
+	.removeButton:hover {
+	  transform: scale(2.2);
+	} 	
+	
 /**************** images styles ****************/		
 	a img{
 	  border: none;
@@ -103,8 +110,15 @@
 	  float: right;
 	  margin: 0 0 5px 12px;
 	  }
-	 
 
+	.laundryImage {
+	  transition: all .2s ease-in-out; 
+	}
+	.laundryImage:hover {
+	  transform: scale(3.9);
+	  border: 1px solid #a0a0a0;
+	} 	  
+	  
 /**************** header styles ****************/
 	#header {
 	  width: 1250px;

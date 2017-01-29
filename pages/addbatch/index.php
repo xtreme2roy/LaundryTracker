@@ -62,12 +62,12 @@
 					
 					<table id="laundryDetailsTable" class="nogap" align="center" style="width:90%;">
 					<thead>
-						<th>Image</th>
+						<th style="width:14%;">Image</th>
 						<th>Type</th>
 						<th>Color</th>
 						<th>Description/Brand</th>
 						<th>Owner</th>
-						<th>Remove?</th>
+						<th style="width:5%;">Remove?</th>
 					</thead> 
 					<?php require_once('../../functions/showbatch.php');?>
 					</table>

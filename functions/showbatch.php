@@ -9,12 +9,12 @@ if($list != "all"){
 		if(trim($entry) != ''){
 			$arrayEntry = explode('-', $entry);
 			echo "<tr align=center class=\"rowhighlight\">";
-				echo "<td valign=\"bottom\"><img src=\"../../images/laundry/".$entry.".JPG\" height=\"180\" width=\"150\" class=\"thumbnail\"></img></td>";
+				echo "<td valign=\"bottom\"><img src=\"../../images/laundry/".$entry.".JPG\" height=\"180\" width=\"150\" class=\"laundryImage\"></img></td>";
 				echo "<td>".strtoupper(str_replace("_", " ", $arrayEntry[0]))."</td>";
 				echo "<td>".strtoupper(str_replace("_", " ", $arrayEntry[1]))."</td>";
 				echo "<td>".strtoupper(str_replace("_", " ", $arrayEntry[2]))."</td>";
 				echo "<td>".strtoupper($arrayEntry[3])."</td>";
-				echo "<td><a href=\"../../functions/removeitem.php?item=".trim($entry)."&list=".$list."\"><img src=\"../../images/remove-item.png\" class=\"clickable\"></img></a></td>";
+				echo "<td><a href=\"../../functions/removeitem.php?item=".trim($entry)."&list=".$list."\"><img src=\"../../images/remove-item.png\" width=25 height=25 class=\"removeButton\"></img></a></td>";
 			echo "</tr>";
 			$laundryCount++;
 		}
