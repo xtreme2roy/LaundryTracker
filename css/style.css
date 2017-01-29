@@ -89,41 +89,40 @@
 /**************** images styles ****************/		
 	a img{
 	  border: none;
-	  }
+	}
 
 	img.left,img.center,img.right {
-	  padding: 0px;
-	  border: 1px solid #a0a0a0;
-	  }
+	  padding: 0px;	  
+	}
 
 	img.left {
 	  float: left;
+	  padding-left: 5px;
+	  padding-top: 5px;
 	  margin: 0 12px 5px 0;
-	  }
+	}
 
 	img.center {
 	  display: block;
 	  margin: 0 auto 5px auto;
-	  }
+	}
 
 	img.right {
 	  float: right;
 	  margin: 0 0 5px 12px;
-	  }
+	}
 
 	.laundryImage {
 	  transition: all .2s ease-in-out; 
 	}
 	.laundryImage:hover {
-	  transform: scale(3.9);
-	  border: 0.5px solid #a0a0a0;
+	  transform: scale(3.9);	  
 	} 	  
 	.laundryImageSearch {
 	  transition: all .2s ease-in-out; 
 	}
 	.laundryImageSearch:hover {
-	  transform: scale(6.8);
-	  border: 0.5px solid #a0a0a0;
+	  transform: scale(6.8);	  
 	} 	
 	  
 /**************** header styles ****************/
