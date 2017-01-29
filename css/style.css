@@ -97,9 +97,7 @@
 
 	img.left {
 	  float: left;
-	  padding-left: 5px;
-	  padding-top: 5px;
-	  margin: 0 12px 5px 0;
+	  padding: 5px 5px 5px 5px;
 	}
 
 	img.center {
@@ -124,6 +122,20 @@
 	.laundryImageSearch:hover {
 	  transform: scale(6.8);	  
 	} 	
+	
+	.roundCornerLaundryImage {
+    border-radius: 15px;    
+    padding: 5px; 
+    width: 150px;
+    height: 180px; 
+	}
+	
+	.roundCornerLaundryImageSearch {
+    border-radius: 10px;    
+    padding: 5px; 
+    width: 70px;
+    height: 100px; 
+	}
 	  
 /**************** header styles ****************/
 	#header {

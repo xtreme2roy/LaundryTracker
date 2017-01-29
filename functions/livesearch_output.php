@@ -13,8 +13,8 @@ if (strlen($key)>0) {
 			if (substr_count(strtolower($fileNameNoExtension), strtolower($key)) > 0) {
 				$hint .= "<div>";
 					$hint .= "<a href=\"../../functions/additem.php?item=".$fileNameNoExtension."&list=".$list."\">";
-						$hint .= "<img src=\"../../images/laundry/".$fileinfo->getFilename()."\" height=\"100\" width=\"70\" border=\"1\" class=\"left laundryImageSearch\">&nbsp;</img>";														
-						$hint .= "<br /><br /><p style=\"float:left;\"> ".$fileNameNoExtension."</p><br /><br /><br /><br /><br />";
+						$hint .= "<img src=\"../../images/laundry/".$fileinfo->getFilename()."\" height=\"100\" width=\"70\" border=\"1\" class=\"left laundryImageSearch roundCornerLaundryImageSearch\">&nbsp;</img>";														
+						$hint .= "<br /><br /><p style=\"float:left;\"> ".$fileNameNoExtension."</p><br /><br /><br /><br /><br /><br />";
 					$hint .= "</a>";				
 				$hint .= "</div>";
 			}
