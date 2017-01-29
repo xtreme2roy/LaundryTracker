@@ -92,7 +92,7 @@
 	  }
 
 	img.left,img.center,img.right {
-	  padding: 4px;
+	  padding: 0px;
 	  border: 1px solid #a0a0a0;
 	  }
 
@@ -116,8 +116,15 @@
 	}
 	.laundryImage:hover {
 	  transform: scale(3.9);
-	  border: 1px solid #a0a0a0;
+	  border: 0.5px solid #a0a0a0;
 	} 	  
+	.laundryImageSearch {
+	  transition: all .2s ease-in-out; 
+	}
+	.laundryImageSearch:hover {
+	  transform: scale(6.8);
+	  border: 0.5px solid #a0a0a0;
+	} 	
 	  
 /**************** header styles ****************/
 	#header {

@@ -11,13 +11,12 @@ if (strlen($key)>0) {
 		if (!$fileinfo->isDot()) {
 			$fileNameNoExtension = preg_replace("/\.[^.]+$/", "", $fileinfo->getFilename());
 			if (substr_count(strtolower($fileNameNoExtension), strtolower($key)) > 0) {
-				$hint .= "<pre>";
-				$hint .= "<a href=\"../../functions/additem.php?item=".$fileNameNoExtension."&list=".$list."\">";
-				$hint .= "<img src=\"../../images/laundry/".$fileinfo->getFilename()."\" height=\"100\" width=\"80\" border=\"5\" >";
-				$hint .= "<h3 style=\"float:left;\"> ".$fileNameNoExtension."</h3>";
-				$hint .= "</img>";
-				$hint .= "</a>";
-				$hint .= "</pre>";
+				$hint .= "<div style=\"width:50%;\">";
+					$hint .= "<a href=\"../../functions/additem.php?item=".$fileNameNoExtension."&list=".$list."\">";
+						$hint .= "<img src=\"../../images/laundry/".$fileinfo->getFilename()."\" height=\"100\" width=\"70\" border=\"1\" class=\"left laundryImageSearch\">&nbsp;</img>";														
+						$hint .= "<br /><br /><h2 style=\"float:left;\"> ".$fileNameNoExtension."</h2><br /><br /><br /><br /><br />";
+					$hint .= "</a>";				
+				$hint .= "</div>";
 			}
 		}
 	}

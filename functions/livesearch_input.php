@@ -15,7 +15,7 @@ function showResult(str, list) {
   xmlhttp.onreadystatechange=function() {
     if (this.readyState==4 && this.status==200) {
       document.getElementById("livesearch").innerHTML=this.responseText;
-      document.getElementById("livesearch").style.border="1px solid #A5ACB2";
+      document.getElementById("livesearch").style.border="1px solid #a0a0a0";
     }
   }
   xmlhttp.open("GET","../../functions/livesearch_output.php?key="+str+"&list="+list,true);
