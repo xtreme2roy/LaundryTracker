@@ -38,14 +38,14 @@
 									$isClaimed = (strtolower($batchDetails[4]) == 'y') ? '<font color="#00FF00">Yes</font>': '<font color="red">No</font>';
 									$deliveryTime = explode('-', $batchDetails[5]);
 									
-									echo "<b>Date:</b> ".$batchDetails[1]." | <b>Time:</b> ".$deliveryTime[0].":".$deliveryTime[1]." ".strtoupper($deliveryTime[2])." | Count: <b>".$laundryCount."</b> | Weight: <b>".$batchDetails[6]." kg </b> | Delivered: ".$isDelivered." | Claimed: ".$isClaimed;
+									echo "Date: <b>".$batchDetails[1]."</b> | Time: <b>".$deliveryTime[0].":".$deliveryTime[1]." ".strtoupper($deliveryTime[2])."</b> | Count: <b>".$laundryCount."</b> | Weight: <b>".$batchDetails[6]." kg </b> | Delivered: ".$isDelivered." | Claimed: ".$isClaimed;
 									
 								}
 								else{
 									$defaultStatus = '<font color="red">No</font>';
 									date_default_timezone_set('Asia/Manila');
 									$deliveredFileName = 'laundryEntry_'.date('Y-m-d').'_0.00_y_n_'.date('h-i-a');
-									echo "<b>Date:</b> ".date('Y-m-d')." | <b>Time:</b> ".date('h:i A')." | Count: <b>".$laundryCount."</b> | Weight: <b>0.0 kg</b> | Delivered: ".$defaultStatus." | Claimed: ".$defaultStatus;
+									echo "Date: <b>".date('Y-m-d')."</b> | Time: <b>".date('h:i A')."</b> | Count: <b>".$laundryCount."</b> | Weight: <b>0.0 kg</b> | Delivered: ".$defaultStatus." | Claimed: ".$defaultStatus;
 								}
 							?>
 						</td>
