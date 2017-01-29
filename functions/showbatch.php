@@ -97,6 +97,7 @@ else {
 					echo "<td>".$batchDetails[1]."</td>";
 					echo "<td>".$deliveryTime[0].":".$deliveryTime[1]." ".strtoupper($deliveryTime[2])."</td>";
 					echo "<td>".$laundryCount."</td>";
+					echo "<td>".$batchDetails[6]." kg</td>";
 					echo "<td>P ".$batchDetails[2]."</td>";
 					echo "<td>".$isDelivered."</td>";
 					echo "<td>".$isClaimed."</td>";

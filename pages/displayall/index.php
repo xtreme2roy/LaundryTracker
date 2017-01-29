@@ -11,6 +11,7 @@
 					<th>Batch Date</th>
 					<th>Time Delivered</th>
 					<th>No. of Pieces</th>
+					<th>Weight(kg)</th>
 					<th>Amount</th>							
 					<th>Delivered[Yes/No]</th>
 					<th>Claimed[Yes/No]</th>
