@@ -80,7 +80,7 @@ else {
 				while(!feof($laundryEntry)){
 					$entry = fgets($laundryEntry);
 					if(trim($entry) != ''){
-						if (substr_count(strtolower(trim($entry)), 'sock') > 0) {
+						if ((substr_count(strtolower(trim($entry)), 'sock') > 0) || (substr_count(strtolower(trim($entry)), 'glove') > 0)) {
 							$laundryCount+=2;
 						}else {
 							$laundryCount++;	
