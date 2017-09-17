@@ -9,7 +9,7 @@ if($list != "all"){
 		if(trim($entry) != ''){
 			$arrayEntry = explode('-', $entry);
 			echo "<tr align=center class=\"rowhighlight\">";
-				echo "<td valign=\"bottom\"><img src=\"../../images/laundry/".$entry.".JPG\" height=\"180\" width=\"150\" class=\"laundryImage roundCornerLaundryImage\"></img></td>";
+				echo "<td valign=\"bottom\"><img src=\"../../images/laundryImageDatabase/".$entry.".JPG\" height=\"180\" width=\"150\" class=\"laundryImage roundCornerLaundryImage\"></img></td>";
 				echo "<td>".strtoupper(str_replace("_", " ", $arrayEntry[0]))."</td>";
 				echo "<td>".strtoupper(str_replace("_", " ", $arrayEntry[1]))."</td>";
 				echo "<td>".strtoupper(str_replace("_", " ", $arrayEntry[2]))."</td>";

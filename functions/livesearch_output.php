@@ -6,14 +6,14 @@ $key=$_GET["key"];
 //If key input is not empty, search key on the Laundry Image Database
 if (strlen($key)>0) {
 	$hint="";
-	$dir = new DirectoryIterator(dirname('../images/laundry/.'));
+	$dir = new DirectoryIterator(dirname('../images/laundryImageDatabase/.'));
 	foreach ($dir as $fileinfo) {
 		if (!$fileinfo->isDot()) {
 			$fileNameNoExtension = preg_replace("/\.[^.]+$/", "", $fileinfo->getFilename());
 			if (substr_count(strtolower($fileNameNoExtension), strtolower($key)) > 0) {
 				$hint .= "<div>";
 					$hint .= "<a href=\"../../functions/additem.php?item=".$fileNameNoExtension."&list=".$list."\">";
-						$hint .= "<img src=\"../../images/laundry/".$fileinfo->getFilename()."\" height=\"100\" width=\"70\" border=\"1\" class=\"left laundryImageSearch roundCornerLaundryImageSearch\">&nbsp;</img>";														
+						$hint .= "<img src=\"../../images/laundryImageDatabase/".$fileinfo->getFilename()."\" height=\"100\" width=\"70\" border=\"1\" class=\"left laundryImageSearch roundCornerLaundryImageSearch\">&nbsp;</img>";														
 						$hint .= "<br /><br /><p style=\"float:left;\"> ".$fileNameNoExtension."</p><br /><br /><br /><br /><br /><br />";
 					$hint .= "</a>";				
 				$hint .= "</div>";
