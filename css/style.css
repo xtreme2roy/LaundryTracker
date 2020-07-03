@@ -124,17 +124,17 @@
 	} 	
 	
 	.roundCornerLaundryImage {
-    border-radius: 15px;    
-    padding: 5px; 
-    width: 150px;
-    height: 180px; 
+	  border-radius: 15px;    
+	  padding: 5px; 
+	  width: 150px;
+	  height: 180px; 
 	}
 	
 	.roundCornerLaundryImageSearch {
-    border-radius: 10px;    
-    padding: 5px; 
-    width: 70px;
-    height: 100px; 
+	  border-radius: 10px;    
+	  padding: 5px; 
+	  width: 70px;
+	  height: 100px; 
 	}
 	  
 /**************** header styles ****************/
